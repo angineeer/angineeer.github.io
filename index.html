@@ -38,8 +38,8 @@
   	<script>
 	    function getURL()
 	    {
-	    	var rawURL = window.location.href;
-	    	var verifier = rawURL.substr((rawURL.length-33), rawURL.length-1);
+	    	var rawURL = window.location.href; //Get the raw auth URL.
+	    	var verifier = rawURL.substr((rawURL.length-33), rawURL.length-1); //Extract the verifier from the raw URL.
 
 	        /* Select the text field */
 			verifier.select();
