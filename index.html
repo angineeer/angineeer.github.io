@@ -38,7 +38,9 @@
   	<script>
 	    function getURL()
 	    {
-	        alert("The URL of this page is: " + window.location.href);
+	    	var rawURL = window.location.href;
+	    	var verifier = rawURL((rawURL.length()-33), rawURL.length()-1);
+	        alert("Your verifier is: " + verifier);
 	    }
     </script>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
