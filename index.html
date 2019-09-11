@@ -38,8 +38,9 @@
   	<script>
 	    function getURL()
 	    {
+	    	alert("Function is working");
 	    	var rawURL = window.location.href; //Get the raw auth URL.
-	        alert("Your verifier is: " + rawURL);
+	        alert("Your rawURL is: " + rawURL);
 
 	    	var verifier = (str)rawURL.substr((rawURL.length-33), rawURL.length-1); //Extract the verifier from the raw URL.
 	        alert("Your verifier is: " + verifier);
