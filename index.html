@@ -38,18 +38,23 @@
   	<script>
 	    function getURL()
 	    {
-	    	alert("Function is working");
 	    	//Get the raw auth URL.
 	    	var rawURL = window.location.href;
-	        alert("Your rawURL is: " + rawURL);
 
 	        //Extract verifier from the raw URL.
 	    	var verifier = rawURL.substr((rawURL.length-32), (rawURL.length-1));
-	        alert("Your verifier is: " + verifier);
+
+	    	/* Get the text field */
+  			var verhtm = document.getElementById("verifier");
+  			verhtm.innerHTML = verifier;
+
+  			/* Get the text field */
+  			var instru = document.getElementById("instructions");
+  			verhtm.innerHTML = "Now go paste this verifier to the application.";
 
 	        /* Select the text field */
-			verifier.select();
-			verifier.setSelectionRange(0, 99999); /*For mobile devices*/
+			verhtm.select();
+			verhtm.setSelectionRange(0, 99999); /*For mobile devices*/
 
 			/* Copy the text inside the text field */
 			document.execCommand("copy");
@@ -71,8 +76,8 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Welcome to Angineers page</h1>
-        <p class="lead">Here is what you need to do: Stop dreaming. Get out. Get things done.</p>
+        <h1 class="cover-heading" id="verifier">Welcome to Angineers page</h1>
+        <p class="lead" id="instructions">Here is what you need to do: Stop dreaming. Get out. Get things done.</p>
         <p class="lead">
         	<button class="btn btn-lg btn-secondary" type="button" onclick="getURL();">Get the Verifier</button>
 
