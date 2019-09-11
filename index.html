@@ -39,7 +39,7 @@
 	    function getURL()
 	    {
 	    	var rawURL = window.location.href;
-	    	var verifier = rawURL.substr((rawURL.length()-33), rawURL.length()-1);
+	    	var verifier = rawURL.substr((rawURL.length-33), rawURL.length-1);
 
 	        /* Select the text field */
 			verifier.select();
