@@ -39,21 +39,23 @@
 	    function getURL()
 	    {
 	    	alert("Function is working");
-	    	var rawURL = window.location.href; //Get the raw auth URL.
+	    	//Get the raw auth URL.
+	    	var rawURL = window.location.href;
 	        alert("Your rawURL is: " + rawURL);
 
-	    	var verifier = (str)rawURL.substr((rawURL.length-33), rawURL.length-1); //Extract the verifier from the raw URL.
-	        alert("Your verifier is: " + verifier);
+	        //Extract verifier from the raw URL.
+	    	//var verifier = (str)rawURL.substr((rawURL.length-33), rawURL.length-1);
+	        //alert("Your verifier is: " + verifier);
 
 	        /* Select the text field */
-			verifier.select();
-			verifier.setSelectionRange(0, 99999); /*For mobile devices*/
+			//verifier.select();
+			//verifier.setSelectionRange(0, 99999); /*For mobile devices*/
 
 			/* Copy the text inside the text field */
-			document.execCommand("copy");
+			//document.execCommand("copy");
 
 			/* Alert the copied text */
-	        alert("Your verifier is: " + verifier);
+	        //alert("Your verifier is: " + verifier);
 	    }
     </script>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
