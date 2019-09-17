@@ -32,7 +32,10 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
 
+    <!-- Icons from bootstrapcdn and fontawesome. Bootstrapcdn uses fontawesome 4.7.0 (Does not include new 5.0 icons)-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/742762eaed.js"></script>
+
   </head>
 
   <body class="text-center">
@@ -65,29 +68,31 @@
 	    }
     </script>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
+	    <header class="masthead mb-auto">
+		    <div class="inner">
+		    	<div class="d-flex masthead-brand">
+					<h3 class="fas fa-code pt-1 pr-2" aria-hidden="true"></h3>
+					<h3 class="font-italic">Angineer</h3>
+		    	</div>
+		        <nav class="nav nav-masthead justify-content-center">
+	            	<a class="nav-link active" href="home.html">Home</a>
+	            	<a class="nav-link" href="about.html">About</a>
+	            	<a class="nav-link" href="contact.html">Contact</a>
+				</nav>
+		    </div>
+	    </header>
+
+	<main role="main" class="inner cover">
+		<h1 class="cover-heading" id="verifier">Welcome to Angineers page</h1>
+		<p class="lead" id="instructions">Here is what you need to do: Stop dreaming. Get out. Get things done.</p>
+		<p class="lead">
+			<button class="btn btn-lg btn-secondary" type="button" onclick="getURL();">Get the Verifier</button>
+		</p>
+	</main>
+
+   	<footer class="mastfoot mt-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Angineer</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="home.html">Home</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="contact.html">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading" id="verifier">Welcome to Angineers page</h1>
-        <p class="lead" id="instructions">Here is what you need to do: Stop dreaming. Get out. Get things done.</p>
-        <p class="lead">
-        	<button class="btn btn-lg btn-secondary" type="button" onclick="getURL();">Get the Verifier</button>
-
-        </p>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    		<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
         </div>
       </footer>
     </div>
