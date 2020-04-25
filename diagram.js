@@ -1,13 +1,13 @@
 var $ = function (elementid) {return document.getElementById(elementid);};
 
-var responseto6no = {prompt: "Anakartda sorun var. Yeni Anakart sipariş et.", answer: false, answerable: false};
-var responseto6yes = {prompt: "Yeni Dimm pc/ Memory Card siparişi ver.", answer: false, answerable: false};
+var responseto6no = {prompt: "Anakartta sorun var. Yeni Anakart sipariş et.", answer: false, answerable: false};
+var responseto6yes = {prompt: "Yeni Dimm PC/Memory Card siparişi ver.", answer: false, answerable: false};
 var responsetoresponse = {prompt: "Tebrikler.", answer: false, answerable: false};
 
-var test6 = { prompt: "Dimm PC/ Memory Cardi başka türbin ile yer değiştirdiğinde arayüze ulaşıyor musun?", answer: false, answerable: true, yes: responseto6yes, no: responseto6no, elementid: "test6"};
+var test6 = { prompt: "Dimm PC/ Memory Card ı başka türbin ile yer değiştirdiğinde arayüze ulaşıyor musun?", answer: false, answerable: true, yes: responseto6yes, no: responseto6no, elementid: "test6"};
 
-var response1 = {prompt: "Konfigurasyon hatalı yapılmış. Tekrar commissioning yapılması gerekiyor. TBO ile görüş.", answer: false, answerable: false};
-var response2= {prompt: "Boardlarda sorun var. Dimm PC konfigurasyonunda sorun var. Enerji Kes/Ver. Reset at. Sorun çözüldü mü?", answer: false, answerable: true, yes: responsetoresponse, no: test6};
+var response1 = {prompt: "Konfigürasyon hatalı yapılmış. Tekrar commissioning yapılması gerekiyor. TBO ile görüş.", answer: false, answerable: false};
+var response2= {prompt: "Boardlarda sorun var. Dimm PC konfigürasyonunda sorun var. Enerji kes/ver. Reset at. Sorun çözüldü mü?", answer: false, answerable: true, yes: responsetoresponse, no: test6};
 var response3 = {prompt: "Beslemeyi kontrol et, arayüze girmeye çalış.", answer: false, answerable: false};
 var response4 = {prompt: "Kuledeki fiber F/O ve switchleri kontrol et.", answer: false, answerable: false};
 
