@@ -4,27 +4,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TunaDiagram</title>
+    <title>TunahanKontrol</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 
 <body style="background-color: rgb(24,27,28);">
     <div class="container">
-        <div class="row" style="margin-top: 25%;">
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 15px;"><button id="test1" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test1)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">1</button></div>
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test2" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test2)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">2</button></div>
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test3" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test3)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">3</button></div>
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test4" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test4)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">4</button></div>
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test5" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test5)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">5</button></div>
-            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 15px;padding-left: 0px;"><button id="test6" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test6)" style="font-size: 40px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">6</button></div>
+        <div class="row" style="margin-top: 10%;">
+            <div class="col text-center d-xl-flex align-items-xl-center">
+                <h1 class="text-capitalize" style="color: rgb(255,255,255);">CMS Communication hata çözüm yönergesi</h1>
+            </div>
+            <div class="col-xl-5 d-xl-flex justify-content-xl-end"><img class="rounded img-fluid border d-xl-flex justify-content-xl-center align-items-xl-center" src="nordex.png" alt="Şirket logosu" style="width: 350px;height: 75px; background-color: white;" /></div>
         </div>
-        <div class="row" style="margin-top: 10px;">
+
+        <div id="nameidrow" class="row" style="display: block; margin-top: 10px;">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                            <h5>Teknisyen isim:</h5>
+                            <input id="name" type="text" class="form-control"/>
+                            <h5 style="margin-top: 15px;">Cms İletişim sorunu olan türbinin NX numarasını girin:</h5>
+                            <input id="nxnumber" type="text" class="form-control" style="width: 100%;"/>
+                            <button class="btn btn-primary btn-block btn-lg" type="button" style="margin-top: 30px;font-size: 25px;" onclick="proceed()">Devam et</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="testnumrow1" class="row" style="margin-top: 50px; display: none; margin-top: 10px;">
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 15px;"><button id="test1" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test1)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">1</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test2" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test2)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">2</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test3" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test3)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">3</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test4" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test4)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">4</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test5" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test5)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">5</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 15px;padding-left: 0px;"><button id="test6" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test6)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">6</button></div>
+        </div>
+        <div id="testnumrow2" class="row" style="margin-top: 50px; display: none; margin-top: 10px;">
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 15px;"><button id="test7" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test7)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">7</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test8" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test8)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">8</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test9" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test9)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">9</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test10" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test10)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">10</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 5px;padding-left: 0px;"><button id="test11" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test11)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">11</button></div>
+            <div class="col text-center" style="background-color: rgba(233,236,239,0);padding-right: 15px;padding-left: 0px;"><button id="test12" class="btn btn-light btn-block btn-sm text-center" type="button" onclick="navigate(test12)" style="font-size: 35px;font-weight: bold;color: rgb(0,0,0);background-color: rgb(233,236,239);">12</button></div>
+        </div>
+        <div id="mainrow" class="row" style="margin-top: 10px; display: none;">
             <div class="col">
                 <div class="jumbotron" style="background-color: #e9ecef;">
-                    <h1 id="prompt" class="text-center" style="margin-bottom: 50px;font-weight: bold;">Test text</h1>
+
+                    <h2 id="prompt" class="text-center" style="margin-bottom: 50px;font-weight: bold;">Test text</h2>
+
                     <div class="row" id="yesnobuttons">
-                        <div class="col"><button class="btn btn-success btn-block btn-lg" type="button" onclick="yesPressed()" style="font-size: 30px;font-weight: bold;font-style: normal;background-color: #28a745;">Evet</button></div>
-                        <div class="col"><button class="btn btn-danger btn-block btn-lg" type="button" onclick="noPressed()" style="font-size: 30px;font-weight: bold;background-color: #dc3545;">Hayır</button></div>
+                        <div class="col"><button id="buttonyes" class="btn btn-success btn-block btn-lg" type="button" onclick="yesPressed()" style="font-size: 30px;font-weight: bold;font-style: normal;">Evet</button></div>
+                        <div class="col" id="buttonnocol"><button id="buttonno" class="btn btn-danger btn-block btn-lg" type="button" onclick="noPressed()" style="font-size: 30px;font-weight: bold;">Hayır</button></div>
+                        <div class="col" id="ccol" style="display: none;"><button id="button3" class="btn btn-dark btn-block btn-lg" type="button" onclick="cpressed()" style="font-size: 30px;font-weight: bold;">CF Memory Card</button></div>
+                    </div>
+
+                    <div id="instruction1row" class="row" style="margin-top: 30px; display: none;">
+                        <div class="col">
+                            <h4 id="instruction1">Sahaya SWAS uzerinden erişim yapın.</h4>
+                            <img id="instruction1img1" style="display: none;" class="rounded img-fluid" src="" alt="ins2img1"/>
+                            <img id="instruction1img2" style="display: none;" class="rounded img-fluid" src="" alt="ins2img2"/>
+                        </div>
+                    </div>
+                    <div id="instruction2row" class="row" style="margin-top: 30px; display: none;">
+                        <div class="col">
+                            <h4 id="instruction2">Sahaya SWAS uzerinden erişim yapın.</h4>
+                            <img id="instruction2img1" style="display: none;" class="rounded img-fluid" src="" alt="ins2img1"/>
+                            <img id="instruction2img2" style="display: none;" class="rounded img-fluid" src="" alt="ins2img2"/>
+                            <img id="instruction2img3" style="display: none;" class="rounded img-fluid" src="" alt="ins2img3"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,6 +78,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="diagram.js"></script>
 </body>
 
